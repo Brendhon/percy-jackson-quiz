@@ -2,6 +2,10 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Windlass';
+    src: url('../assets/font/Windlass.ttf') format("ttf");
+  }
   body {
     margin: 0;
     padding: 0;
