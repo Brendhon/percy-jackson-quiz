@@ -19,6 +19,7 @@ Projeto realizado durante a **Imersão React Next.js** oferecido pela **[Alura](
 As seguintes tecnologias foram utilizadas na construção do projeto:
 
 - **[React](https://pt-br.reactjs.org/)**
+- **[ESLint](https://eslint.org/)**
 - **[Next.js](https://nextjs.org/)**
 - **[Next Fonts](https://www.npmjs.com/package/next-fonts)**
 - **[Next Images](https://www.npmjs.com/package/next-images)**
