@@ -18,12 +18,12 @@ module.exports = {
     'react',
   ],
   rules: {
-
     // Regra para ignorar o erro de spreading 
-    'react/jsx-props-no-spreading': ['error', {
-      html: 'ignore',
-      custom: 'ignore',
-      exceptions: [],
-    }],
+    'react/jsx-props-no-spreading': ['enabled', {
+      'html': 'ignore' | 'enforce',
+      'custom': 'ignore' | 'enforce',
+      'explicitSpread': 'ignore' | 'enforce',
+      'exceptions': []
+    }]
   },
 };
