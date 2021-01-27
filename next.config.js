@@ -1,3 +1,5 @@
 // next.config.js
-const withFonts = require('next-fonts');
-module.exports = withFonts();
+const withFonts = require('next-fonts')
+const withImages = require('next-images')
+
+module.exports = withImages(withFonts())
