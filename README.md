@@ -8,7 +8,7 @@
 
 ## 🔱 Sobre o projeto
 
-Quiz sobre o universo de livros sobre **Percy Jackson** criado por **[Rick Riordan](https://rickriordan.com/)**.
+Quiz sobre o universo criado por **[Rick Riordan](https://rickriordan.com/)**.
 
 Projeto realizado durante a **Imersão React Next.js** oferecido pela **[Alura](https://www.alura.com.br/)**.
 
