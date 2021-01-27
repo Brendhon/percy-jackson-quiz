@@ -1,4 +1,10 @@
 import styled from 'styled-components'
+import Image from 'next/image'
+import Head from 'next/head'
+
+import aluraLogo from '../assets/img/alura-logo.svg'
+import db from '../db.json'
+
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
@@ -19,7 +25,18 @@ export default function Home() {
   return (
     <QuizBackground>
 
+      <Head>
+        <title>{db.title}</title>
+      </Head>
+
       <QuizContainer>
+
+        <Image
+          src={aluraLogo}
+          alt="Logo do evento"
+          width={120}
+          height={50}
+        />
 
         <Widget>
 
@@ -47,7 +64,7 @@ export default function Home() {
 
       </QuizContainer>
 
-      <GitHubCorner projectUrl="https://github.com/Brendhon"/>
+      <GitHubCorner projectUrl="https://github.com/Brendhon" />
 
     </QuizBackground>
   )
