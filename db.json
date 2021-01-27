@@ -1,6 +1,6 @@
 {
     "title": "Quiz do universo de Percy Jackson",
-    "description": "Teste os seus conhecimentos sobre Percy Jackson",
+    "description": "Teste os seus conhecimentos sobre Percy Jackson e seu universo",
     "questions": [
         {
             "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -30,10 +30,11 @@
     ],
     "theme": {
         "colors": {
-            "primary": "#03a9f4",
+            "primary": "#031F4B",
             "secondary": "#1de9b6",
-            "mainBg": "#171B35",
-            "contrastText": "#FFFFFF",
+            "border": "#1de9b6",
+            "mainBg": "#04396C",
+            "contrastText": "#a6d4fa",
             "wrong": "#FF5722",
             "success": "#4CAF50"
         },
