@@ -1,12 +1,8 @@
 import styled from 'styled-components'
-import img from '../assets/img/wallpaper.png'
-
-const Background = styled.div`
-  background-image: url(${img});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`
+import Widget from '../src/components/Widget'
+import Footer from '../src/components/Footer'
+import GitHubCorner from '../src/components/GitHubCorner'
+import QuizBackground from '../src/components/QuizBackground'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -21,10 +17,38 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <Background>
+    <QuizBackground>
+
       <QuizContainer>
-        aaa
+
+        <Widget>
+
+          <Widget.Header>
+            <h1>Percy Jackson</h1>
+          </Widget.Header>
+
+          <Widget.Content>
+
+            <p>Perguntas sobre A saga de livros PERCY JACKSON E OS OLIMPIANOS</p>
+          </Widget.Content>
+
+        </Widget>
+
+        <Widget>
+
+          <Widget.Content>
+            <h1>Percy Jackson</h1>
+            <p>Perguntas sobre A saga de livros PERCY JACKSON E OS OLIMPIANOS</p>
+          </Widget.Content>
+
+        </Widget>
+
+        <Footer />
+
       </QuizContainer>
-    </Background>
+
+      <GitHubCorner projectUrl="https://github.com/Brendhon"/>
+
+    </QuizBackground>
   )
 }
