@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from '../../../assets/img/wallpaper.png'
+import backgroundImage from '../../../assets/img/wallpaper.png';
 
 const QuizBackground = styled.div`
   width: 100%;

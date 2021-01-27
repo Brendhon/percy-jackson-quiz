@@ -1,14 +1,15 @@
-import styled from 'styled-components'
-import Image from 'next/image'
-import Head from 'next/head'
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import Head from 'next/head';
 
-import aluraLogo from '../assets/img/alura-logo.svg'
-import db from '../db.json'
+import aluraLogo from '../assets/img/alura-logo.svg';
+import db from '../db.json';
 
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -19,7 +20,7 @@ export const QuizContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
-`
+`;
 
 export default function Home() {
   return (
@@ -67,5 +68,5 @@ export default function Home() {
       <GitHubCorner projectUrl="https://github.com/Brendhon" />
 
     </QuizBackground>
-  )
+  );
 }
