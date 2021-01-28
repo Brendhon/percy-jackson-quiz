@@ -22,9 +22,11 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 
 - **[React](https://pt-br.reactjs.org/)**
 - **[ESLint](https://eslint.org/)**
+- **[PropTypes](https://www.npmjs.com/package/prop-types)**
 - **[Next.js](https://nextjs.org/)**
 - **[Next Fonts](https://www.npmjs.com/package/next-fonts)**
 - **[Next Images](https://www.npmjs.com/package/next-images)**
+
 - **[Styled Components](https://styled-components.com/)**
 > Veja o arquivo  **[package.json](https://github.com/Brendhon/dark-quiz/blob/main/package.json)**
 
