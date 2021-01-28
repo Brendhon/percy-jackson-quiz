@@ -4,7 +4,7 @@
     <img src="assets\img\logo.png" width="300px;" alt="logo"/>
 </h1>
 
-<h3 align="center">🚧 Em desenvolvimento 1/5 🚧</h3>
+<h3 align="center">🚧 Em desenvolvimento 2/5 🚧</h3>
 
 ## 🔱 Sobre o projeto
 
