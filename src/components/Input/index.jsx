@@ -11,7 +11,7 @@ const InputBase = styled.input`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ theme }) => theme.borderRadius};
   outline: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.contrastText};
