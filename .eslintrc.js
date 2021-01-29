@@ -18,12 +18,8 @@ module.exports = {
     'react',
   ],
   rules: {
-    // Regra para ignorar o erro de spreading 
-    'react/jsx-props-no-spreading': ['enabled', {
-      'html': 'ignore' | 'enforce',
-      'custom': 'ignore' | 'enforce',
-      'explicitSpread': 'ignore' | 'enforce',
-      'exceptions': []
-    }]
+    'linebreak-style': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/prop-types': 0,
   },
 };
