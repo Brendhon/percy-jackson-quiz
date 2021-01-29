@@ -25,7 +25,7 @@ export default function Input({ onChange, placeholder, ...props }) {
       <InputBase
         placeholder={placeholder}
         onChange={onChange}
-        color='#FFF'
+        color="#FFF"
         {...props}
       />
     </div>
