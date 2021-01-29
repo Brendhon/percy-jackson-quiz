@@ -3,25 +3,58 @@
     "description": "Teste os seus conhecimentos sobre Percy Jackson e seu universo",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
-            "answer": 2,
+            "image": "https://pbs.twimg.com/profile_images/415171068010065921/Q2Ld2f1f_400x400.png",
+            "title": "Durante muito tempo Nico foi apaixonado por um personagem, qual?",
+            "description": "Eu mesmo fiquei surpreso quando descobri",
+            "answer": 1,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "Annabeth Chase",
+                "Percy Jackson",
+                "Leo Valdez"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
+            "image": "https://pm1.narvii.com/6401/f1d593ccf93f5dc1ee66a38ec9bf47210b03fa8d_00.jpg",
+            "title": "Quem ajudou Leo no livro O Héroi Perdido a salvar Hera?",
+            "description": "No primeiro livro Annabeth está procurando Percy",
+            "answer": 2,
+            "alternatives": [
+                "Percy e Annabeth",
+                "Hazel e Frank",
+                "Jason e Píper"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/originals/e3/62/0c/e3620c8b43bc55dabf805c49e4d850e8.gif",
+            "title": "Qual recompensa Tyson ganha dos deuses?",
+            "description": "Foi recompensado pois comandou os ciclopes durante a luta contra Tifão",
             "answer": 0,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Vira Chefe dos Ciclopes",
+                "Ele fica invulnerável",
+                "Vira imortal"
+            ]
+        },
+        {
+            "image": "https://www.vippng.com/png/detail/498-4987829_clipart-for-percy-jackson-viria-percy.png",
+            "title": "Onde é o calcanhar de Aquiles de Percy?",
+            "description": "Escolheu esse lugar por ser mais seguro",
+            "answer": 2,
+            "alternatives": [
+                "No cotovelo",
+                "Na perna",
+                "Na base da coluna"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/originals/c4/b7/07/c4b707fc9b899438a83af343dcf51f9d.png",
+            "title": "Quem teve que suportar o peso do céu durante a luta com Atlas?",
+            "description": "Foi feito um sacrifício para que uma deusa pudesse lutar",
+            "answer": 1,
+            "alternatives": [
+                "Annabeth",
+                "Percy",
+                "Zöe"
             ]
         }
     ],
