@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;
   h1, h2, h3 {
     font-size: 15px;
-    font-weight: 600;
     line-height: 1;
     margin-bottom: 0;
   }
   p {
     font-size: 14px;
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.3;
   }
 `;
 
@@ -24,7 +23,7 @@ Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 18px 32px;
+  padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.primary};
   
   * {
@@ -33,7 +32,7 @@ Widget.Header = styled.header`
 `;
 
 Widget.Content = styled.div`
-  padding: 24px 32px 32px 32px;
+  padding: 24px 32px 20px 32px;
   & > *:first-child {
     margin-top: 0;
   }
