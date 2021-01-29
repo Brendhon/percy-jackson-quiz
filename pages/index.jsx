@@ -1,35 +1,21 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import Image from 'next/image';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import aluraLogo from '../assets/img/alura-logo.svg';
 import db from '../db.json';
 
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import QuizLogo from '../src/components/QuizLogo';
 
 export default function Home() {
-
   const router = useRouter();
   const [name, setName] = useState('');
-
 
   return (
     <QuizBackground>
@@ -40,39 +26,33 @@ export default function Home() {
 
       <QuizContainer>
 
-        <Image
-          src={aluraLogo}
-          alt="Logo do evento"
-          width={120}
-          height={50}
-        />
+        <QuizLogo />
 
         <Widget>
 
           <Widget.Header>
-            <h1>Percy Jackson</h1>
+            Percy Jackson
           </Widget.Header>
 
           <Widget.Content>
-    
+
             <p>{db.description}</p>
 
-            <form onSubmit={infosDoEvento => {
+            <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
             >
               <Input
                 name="nomeDoUsuario"
-                onChange={infosDoEvento => setName(infosDoEvento.target.value)}
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Diz ai seu nome"
                 value={name}
               />
-              <Button type="submit" disabled={name.length === 0} >
+              <Button type="submit" disabled={name.length === 0}>
                 Jogar
               </Button>
             </form>
-
 
           </Widget.Content>
 
@@ -81,8 +61,8 @@ export default function Home() {
         <Widget>
 
           <Widget.Content>
-            <h1>Percy Jackson</h1>
-            <p>Perguntas sobre A saga de livros PERCY JACKSON E OS OLIMPIANOS</p>
+            <h2>Quiz da Galera</h2>
+            <p>Perguntas sobre A saga de livros</p>
           </Widget.Content>
 
         </Widget>
