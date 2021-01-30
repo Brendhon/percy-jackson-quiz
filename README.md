@@ -27,10 +27,10 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 - **[Next Fonts](https://www.npmjs.com/package/next-fonts)**
 - **[Next Images](https://www.npmjs.com/package/next-images)**
 - **[Styled Components](https://styled-components.com/)**
-> Veja o arquivo  **[package.json](https://github.com/Brendhon/dark-quiz/blob/main/package.json)**
+> Veja o arquivo **[package.json](https://github.com/Brendhon/dark-quiz/blob/main/package.json)**
 
 ### Utilitários
-- Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
+- Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
 
 ---
 
