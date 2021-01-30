@@ -4,25 +4,13 @@ import db from '../db.json';
 
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
+import Loading from '../src/components/Loading';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Button from '../src/components/Button';
 import GitHubCorner from '../src/components/GitHubCorner';
 import AlternativesForm from '../src/components/AlternativesForm';
-
-function LoadingWidget() {
-  return (
-    <Widget>
-      <Widget.Header>
-        Carregando...
-      </Widget.Header>
-
-      <Widget.Content>
-        [Desafio do Loading]
-      </Widget.Content>
-    </Widget>
-  );
-}
+import Answer from '../src/components/Answer';
 
 function ResultWidget({ results }) {
   return (
@@ -124,8 +112,7 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmitted && isCorrect && <p>Vc acertou! Uhuuuuu 👏👏👏👏 </p>}
-          {isQuestionSubmitted && !isCorrect && <p>Deu bom não 😭😭😭😭😭 </p>}
+          <Answer isQuestionSubmitted={isQuestionSubmitted} isCorrect={isCorrect} />
 
         </AlternativesForm>
 
@@ -157,7 +144,7 @@ export default function QuizPage() {
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 2 * 1000);
   }, []);
 
   const handleSubmit = () => {
@@ -185,7 +172,7 @@ export default function QuizPage() {
           />
         )}
 
-        {screenState === screenStates.LOADING && <LoadingWidget />}
+        {screenState === screenStates.LOADING && <Loading />}
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
 
