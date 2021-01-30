@@ -60,7 +60,8 @@
         }
     ],
     "external": [
-        ""
+        "https://weed-quiz-git-master.gabrielgsd.vercel.app/",
+        "https://aluraquiz-css.omariosouto.vercel.app/"
     ],
     "theme": {
         "colors": {
