@@ -11,6 +11,7 @@ import Button from '../../components/Button';
 import GitHubCorner from '../../components/GitHubCorner';
 import AlternativesForm from '../../components/AlternativesForm';
 import Answer from '../../components/Answer';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultWidget({ results }) {
   return (
@@ -52,6 +53,7 @@ function QuestionWidget({
     <Widget>
 
       <Widget.Header>
+        <BackLinkArrow href="/" />
         {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
       </Widget.Header>
 
