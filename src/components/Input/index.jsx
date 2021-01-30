@@ -8,7 +8,7 @@ const InputBase = styled.input`
   font-size: 14px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   color: ${({ theme }) => theme.colors.contrastText};
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
   border-radius: ${({ theme }) => theme.borderRadius};
   outline: 0;
   margin-bottom: 15px;
