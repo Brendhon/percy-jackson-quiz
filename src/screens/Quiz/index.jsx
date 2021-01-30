@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-import db from '../db.json';
+import db from '../../../db.json';
 
-import Widget from '../src/components/Widget';
-import QuizBackground from '../src/components/QuizBackground';
-import Loading from '../src/components/Loading';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import Button from '../src/components/Button';
-import GitHubCorner from '../src/components/GitHubCorner';
-import AlternativesForm from '../src/components/AlternativesForm';
-import Answer from '../src/components/Answer';
+import Widget from '../../components/Widget';
+import QuizBackground from '../../components/QuizBackground';
+import Loading from '../../components/Loading';
+import QuizContainer from '../../components/QuizContainer';
+import QuizLogo from '../../components/QuizLogo';
+import Button from '../../components/Button';
+import GitHubCorner from '../../components/GitHubCorner';
+import AlternativesForm from '../../components/AlternativesForm';
+import Answer from '../../components/Answer';
 
 function ResultWidget({ results }) {
   return (
