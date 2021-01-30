@@ -26,6 +26,7 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 - **[Next.js](https://nextjs.org/)**
 - **[Next Fonts](https://www.npmjs.com/package/next-fonts)**
 - **[Next Images](https://www.npmjs.com/package/next-images)**
+- **[Material UI](https://material-ui.com/pt/)**
 - **[Styled Components](https://styled-components.com/)**
 > Veja o arquivo **[package.json](https://github.com/Brendhon/dark-quiz/blob/main/package.json)**
 

@@ -9,6 +9,7 @@
     "lint": "eslint ./ --fix"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "next": "latest",
     "next-fonts": "^1.5.1",
     "next-images": "^1.7.0",
