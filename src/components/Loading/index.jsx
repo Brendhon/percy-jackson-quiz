@@ -10,7 +10,7 @@ export default function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        <CircularProgress variant="indeterminate" color="white" />
+        <CircularProgress variant="indeterminate" color="inherit" />
       </Widget.Content>
     </Widget>
   );
