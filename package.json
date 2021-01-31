@@ -11,6 +11,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.57",
+    "framer-motion": "^3.2.2-rc.1",
     "next": "latest",
     "next-fonts": "^1.5.1",
     "next-images": "^1.7.0",
