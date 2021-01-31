@@ -90,9 +90,7 @@ export default function ResultScreen({ results, name }) {
     <Widget>
       <Widget.Header>
         <BackLinkArrow href="/" />
-        Resultado de
-        {' '}
-        { name }
+        Resultado
       </Widget.Header>
 
       {resultSize > Math.floor(results.length / 2)

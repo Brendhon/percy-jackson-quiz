@@ -1,16 +1,18 @@
 import React from 'react';
-import { Alert } from '@material-ui/lab';
+import { Alert, AlertTitle } from '@material-ui/lab';
 import db from '../../../db.json';
 
 export default function Answer({ isQuestionSubmitted, isCorrect }) {
   const success = () => (
-    <Alert severity="success" style={{ backgroundColor: db.theme.colors.contrastText }}>
-      Vc acertou! Uhuuuuu 👏👏👏👏
+    <Alert variant="filled" severity="success" style={{ backgroundColor: db.theme.colors.primary }}>
+      <AlertTitle><strong>Parabéns</strong></AlertTitle>
+      Você acertou! Uhuuuu 👏👏
     </Alert>
   );
   const fail = () => (
-    <Alert severity="error" style={{ backgroundColor: db.theme.colors.contrastText }}>
-      Deu bom não 😭😭😭😭😭
+    <Alert variant="filled" severity="error" style={{ backgroundColor: db.theme.colors.wrong }}>
+      <AlertTitle><strong>Errada</strong></AlertTitle>
+      Mais sorte na proxima 😭😭
     </Alert>
   );
   return (
@@ -19,7 +21,7 @@ export default function Answer({ isQuestionSubmitted, isCorrect }) {
       left: 0,
       bottom: 0,
       margin: 20,
-      zIndex: 1,
+      zIndex: 1000,
     }}
     >
       {isQuestionSubmitted && isCorrect && success()}

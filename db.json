@@ -70,7 +70,7 @@
             "border": "#9DE0AD",
             "mainBg": "#1E3A2A",
             "contrastText": "#D0F0C1",
-            "wrong": "#FF5722",
+            "wrong": "#b43e35",
             "success": "#4CAF50"
         },
         "borderRadius": "5px"
