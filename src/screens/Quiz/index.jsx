@@ -4,106 +4,13 @@ import { useRouter } from 'next/router';
 
 import db from '../../../db.json';
 
-import Widget from '../../components/Widget';
 import QuizBackground from '../../components/QuizBackground';
 import Loading from '../../components/Loading';
 import QuizContainer from '../../components/QuizContainer';
 import QuizLogo from '../../components/QuizLogo';
-import Button from '../../components/Button';
 import GitHubCorner from '../../components/GitHubCorner';
-import AlternativesForm from '../../components/AlternativesForm';
-import Answer from '../../components/Answer';
-import BackLinkArrow from '../../components/BackLinkArrow';
 import Result from '../../components/Result';
-
-function QuestionWidget({
-  question,
-  totalQuestions,
-  questionIndex,
-  onSubmit,
-  addResult,
-}) {
-  const questionId = `question__${questionIndex}`;
-  const [selectedAlternative, setSelectedAlternative] = useState(undefined);
-  const [isQuestionSubmitted, setIsQuestionSubmitted] = useState(false);
-  const isCorrect = selectedAlternative === question.answer;
-  const hasAlternativeSelected = selectedAlternative !== undefined;
-
-  return (
-    <Widget>
-
-      <Widget.Header>
-        <BackLinkArrow href="/" />
-        {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
-      </Widget.Header>
-
-      <img
-        alt="Descrição"
-        style={{
-          width: '100%',
-          height: '150px',
-          objectFit: 'cover',
-        }}
-        src={question.image}
-      />
-
-      <Widget.Content>
-
-        <h2>{question.title}</h2>
-        <p>{question.description}</p>
-
-        <AlternativesForm onSubmit={(e) => {
-          e.preventDefault();
-          setIsQuestionSubmitted(true);
-
-          setTimeout(() => {
-            addResult(isCorrect);
-            onSubmit();
-            setIsQuestionSubmitted(false);
-            setSelectedAlternative(undefined);
-          }, 2000);
-        }}
-        >
-
-          {question.alternatives.map((alternative, alternativeIndex) => {
-            const alternativeId = `alternative__${alternativeIndex}`;
-            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERRO';
-            const isSelected = selectedAlternative === alternativeIndex;
-
-            return (
-              <Widget.Topic
-                as="label"
-                key={alternativeId}
-                htmlFor={alternativeId}
-                data-selected={isSelected}
-                data-status={isQuestionSubmitted && alternativeStatus}
-              >
-                <input
-                  style={{ display: 'none' }}
-                  id={alternativeId}
-                  name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
-                  type="radio"
-                  disabled={isQuestionSubmitted}
-                />
-                {alternative}
-              </Widget.Topic>
-            );
-          })}
-
-          <Button type="submit" disabled={!hasAlternativeSelected || isQuestionSubmitted}>
-            Confirmar
-          </Button>
-
-          <Answer isQuestionSubmitted={isQuestionSubmitted} isCorrect={isCorrect} />
-
-        </AlternativesForm>
-
-      </Widget.Content>
-
-    </Widget>
-  );
-}
+import Question from '../../components/Question';
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -153,7 +60,7 @@ export default function QuizPage() {
         <QuizLogo />
 
         {screenState === screenStates.QUIZ && (
-          <QuestionWidget
+          <Question
             question={question}
             totalQuestions={totalQuestions}
             questionIndex={questionIndex}
