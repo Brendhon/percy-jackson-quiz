@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import db from '../../../db.json';
 
@@ -159,6 +160,10 @@ export default function QuizPage() {
 
   return (
     <QuizBackground>
+
+      <Head>
+        <title>Percy Jackson</title>
+      </Head>
 
       <QuizContainer>
 
