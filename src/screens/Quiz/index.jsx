@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import db from '../../../db.json';
 
@@ -83,13 +84,14 @@ function QuestionWidget({
                   name={questionId}
                   onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
+                  disabled={isQuestionSubmitted}
                 />
                 {alternative}
               </Widget.Topic>
             );
           })}
 
-          <Button type="submit" disabled={!hasAlternativeSelected}>
+          <Button type="submit" disabled={!hasAlternativeSelected || isQuestionSubmitted}>
             Confirmar
           </Button>
 
@@ -110,12 +112,15 @@ const screenStates = {
 };
 
 export default function QuizPage() {
+  const router = useRouter();
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
   const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
+
+  const { name } = router.query;
 
   const addResult = (result) => setResults([
     ...results,
@@ -159,7 +164,7 @@ export default function QuizPage() {
 
         {screenState === screenStates.LOADING && <Loading />}
 
-        {screenState === screenStates.RESULT && <Result results={results} />}
+        {screenState === screenStates.RESULT && <Result results={results} name={name} />}
 
       </QuizContainer>
 

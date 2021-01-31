@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Widget from '../Widget';
+import BackLinkArrow from '../BackLinkArrow';
 
 import success from '../../../assets/img/success.gif';
 import sadness from '../../../assets/img/sadness.gif';
@@ -28,7 +29,7 @@ const ResultContent = styled.div`
   }
 `;
 
-const PositiveResult = ({ resultSize }) => (
+const PositiveResult = ({ resultSize, name }) => (
   <Widget.Content>
 
     <ResultHeader>
@@ -43,13 +44,19 @@ const PositiveResult = ({ resultSize }) => (
     </ResultHeader>
 
     <ResultContent>
-      <p>Parabéns!! Você foi super bem 🔱</p>
+      <p>
+        Parabéns
+        {' '}
+        <strong style={{ fontSize: '20px', color: '#00ff8c70' }}>{name}</strong>
+        {' '}
+        !! Você realmente conhece esse universo 🔱
+      </p>
     </ResultContent>
 
   </Widget.Content>
 );
 
-const NegativeResult = ({ resultSize }) => (
+const NegativeResult = ({ resultSize, name }) => (
   <Widget.Content>
 
     <ResultHeader>
@@ -64,24 +71,33 @@ const NegativeResult = ({ resultSize }) => (
     </ResultHeader>
 
     <ResultContent>
-      <p>Não foi dessa vez!! Quem sabe na proxima 💚</p>
+      <p>
+        Não foi dessa vez
+        {' '}
+        <strong style={{ fontSize: '20px', color: '#00ff8c70' }}>{name}</strong>
+        {' '}
+        !! Quem sabe na proxima 💚
+      </p>
     </ResultContent>
 
   </Widget.Content>
 );
 
-export default function ResultScreen({ results }) {
-  const resultSize = results.length;
+export default function ResultScreen({ results, name }) {
+  const resultSize = results.filter((result) => result === true).length;
 
   return (
     <Widget>
       <Widget.Header>
-        Resultado
+        <BackLinkArrow href="/" />
+        Resultado de
+        {' '}
+        { name }
       </Widget.Header>
 
-      {results.filter((result) => result === true).length > Math.floor(resultSize / 2)
-        ? <PositiveResult resultSize={resultSize} />
-        : <NegativeResult resultSize={resultSize} />}
+      {resultSize > Math.floor(results.length / 2)
+        ? <PositiveResult resultSize={resultSize} name={name} />
+        : <NegativeResult resultSize={resultSize} name={name} />}
     </Widget>
   );
 }
