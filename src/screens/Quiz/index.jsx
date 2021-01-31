@@ -13,29 +13,7 @@ import GitHubCorner from '../../components/GitHubCorner';
 import AlternativesForm from '../../components/AlternativesForm';
 import Answer from '../../components/Answer';
 import BackLinkArrow from '../../components/BackLinkArrow';
-
-function ResultWidget({ results }) {
-  return (
-    <Widget>
-      <Widget.Header>
-        Tela de Resultado
-      </Widget.Header>
-
-      <Widget.Content>
-        <p>
-          {`Vc acertou ${results.filter((result) => result === true).length} perguntas!`}
-        </p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              {`#${index + 1}: Resultado: ${result ? 'Acertou' : 'Errou'}`}
-            </li>
-          ))}
-        </ul>
-      </Widget.Content>
-    </Widget>
-  );
-}
+import Result from '../../components/Result';
 
 function QuestionWidget({
   question,
@@ -181,7 +159,7 @@ export default function QuizPage() {
 
         {screenState === screenStates.LOADING && <Loading />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && <Result results={results} />}
 
       </QuizContainer>
 
