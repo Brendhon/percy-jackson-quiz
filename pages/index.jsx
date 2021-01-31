@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import db from '../db.json';
 
@@ -28,7 +29,16 @@ export default function Home() {
 
         <QuizLogo />
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        >
 
           <Widget.Header>
             Percy Jackson
@@ -58,7 +68,16 @@ export default function Home() {
 
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        >
 
           <Widget.Content>
             <h2>Quiz da Galera</h2>
@@ -85,7 +104,16 @@ export default function Home() {
 
         </Widget>
 
-        <Footer />
+        <Footer
+          as={motion.footer}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        />
 
       </QuizContainer>
 
