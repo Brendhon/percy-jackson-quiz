@@ -1,6 +1,6 @@
 ![Vercel](https://vercelbadge.vercel.app/api/Brendhon/percy-jackson-quiz)
 
-<h1 align="center">Percy Jackson Quiz</h1>
+<h1 align="center">Quiz - Percy Jackson</h1>
 
 <h1 align="center">
     <img src="assets\img\logo.png" width="300px;" alt="logo"/>
