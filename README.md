@@ -3,7 +3,7 @@
 <h1 align="center">Quiz - Percy Jackson</h1>
 
 <h1 align="center">
-    <img src="assets\img\logo.png" width="300px;" alt="logo"/>
+    <img src="assets\img\logo.png" width="350px;" alt="logo"/>
 </h1>
 
 <h3 align="center">✅ Concluído ✅</h3>
